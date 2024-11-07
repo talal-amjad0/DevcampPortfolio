@@ -25,7 +25,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: "Blog was successfully created." }
+        format.html { redirect_to blogs_path, notice: "Blog was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
