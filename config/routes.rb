@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, expect:[:show]
   get "portfolio/:id", to: "portfolios#show", as: "portfolio_show" #as is used to customize the prefix
   # get "pages/home"
