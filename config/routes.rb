@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # get "pages/home"
   get "about", to:"pages#about"
   get "contact", to:  "pages#contact"
+
+  get "ruby-items", to:"portfolios#ruby"
+
   resources :blogs do
     member do
       get :toggle_status
