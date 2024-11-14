@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
   include SetSource
   include CurrentUserConcern
 
- 
+  rescue_from CanCan::AccessDenied do
+    flash[:error] = 'Access denied!'
+    redirect_to root_url
+  end
 
 end

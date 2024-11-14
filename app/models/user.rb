@@ -24,4 +24,9 @@ class User < ApplicationRecord
   def last_name
     self.name.split.last
   end
+
+  def admin?
+    role.name == 'site_admin'
+  end
+
 end
